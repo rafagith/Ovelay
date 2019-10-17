@@ -46,7 +46,7 @@ class _CountriesFieldState extends State<CountriesField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       focusNode: this._focusNode,
       decoration: InputDecoration(labelText: 'Contry'),
     );
