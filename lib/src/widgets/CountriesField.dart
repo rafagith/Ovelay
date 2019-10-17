@@ -29,18 +29,25 @@ class _CountriesFieldState extends State<CountriesField> {
 
     return OverlayEntry(
       builder: (context) => Positioned(
-          left: offset.dx,
-          top: offset.dy + size.height + 5.0,
-          width: size.width,
-          child: Material(
-              elevation: 4.0,
-              child: ListView(
-                  padding: EdgeInsets.zero,
-                  shrinkWrap: true,
-                  children: <Widget>[
-                    ListTile(title: Text('Syria')),
-                    ListTile(title: Text('Lebanon'))
-                  ]))),
+        left: offset.dx,
+        top: offset.dy + size.height + 5.0,
+        width: size.width,
+        child: this.customAutocomplete(),
+      ),
+    );
+  }
+
+  Widget customAutocomplete() {
+    return Material(
+      elevation: 4.0,
+      child: ListView(
+        padding: EdgeInsets.zero,
+        shrinkWrap: true,
+        children: <Widget>[
+          ListTile(title: Text('Syria')),
+          ListTile(title: Text('Lebanon'))
+        ],
+      ),
     );
   }
 
