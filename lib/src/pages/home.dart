@@ -16,9 +16,15 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: CountriesField(),
+      body: Column(
+        children: <Widget>[
+          TextFormField(decoration: InputDecoration(labelText: 'Other'),),
+          CountriesField(),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){ FocusNode();},
+        onPressed: () {
+        },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
